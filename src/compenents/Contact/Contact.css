@@ -1,0 +1,22 @@
+.property{
+    height: 500px;
+    box-shadow: 0 0 10px gray,
+    inset 0 0 10px black;
+}
+.share{
+    transition: 0.5s;
+}
+.share:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 5px black;
+}
+.share:focus{
+    outline: black;
+}
+.width{
+    width: 95%;
+}
+
+.small{
+    width: 500px;
+}

@@ -1,0 +1,14 @@
+.shadow-effect{
+    box-shadow: 0 0 10px wheat,
+    inset 0 0 2px black
+}
+.linee::before{
+    position: absolute;
+    content: "";
+    width: 50px;
+    border-bottom: 2px solid rgb(248, 223, 110);
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.5s;
+}

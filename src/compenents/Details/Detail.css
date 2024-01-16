@@ -1,0 +1,39 @@
+.wh{
+    width: 90%;
+}
+.h{
+    height: 700px;
+}
+.method{
+    height: 400px;
+}
+.wi{
+    width: 400px;
+}
+.sh{
+    box-shadow: 0 0 10px black;
+}
+.hei1{
+    height: 1250px;
+}
+.hei2{
+    height: 1000px;
+}
+.sha{
+    box-shadow: inset 0 0 10px wheat, 0 0 10px black;
+}
+
+.bor{
+    border: 2px solid black;
+}
+.ml::after{
+    position: absolute;
+    content: "";
+    background-color: wheat;
+    left: -30px;
+    top: 5px;
+    box-shadow: 0 0 10px black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}

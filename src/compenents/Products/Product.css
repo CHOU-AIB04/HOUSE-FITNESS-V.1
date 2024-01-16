@@ -1,0 +1,34 @@
+.el::after{
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: wheat;
+    top: 2px;
+    left: -35px;
+    box-shadow: 0 0 10px black;
+}
+.height{
+    height: 500px;
+}
+.sh{
+    box-shadow: inset 0 0 10px wheat,
+    0 0 10px black;
+}
+.scal:hover{
+    transform: scale(1.01);
+}
+.size{
+    font-size: 12px;
+}
+
+.line::after{
+    position: absolute;
+    content: "";
+    width: 60%;
+    border-bottom: 2px solid wheat;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%);
+}

@@ -1,0 +1,43 @@
+.height{
+    height: 600px;
+}
+.anime{
+    animation: move 2s linear infinite;
+}
+@keyframes move{
+    0%{
+        top: 6px;
+    }
+    25%{
+        top: 10px;
+    }
+    50%{
+        top: 15px;
+    }
+    75%{
+        top: 10px;
+    }
+    100%{
+        top: 6px;
+    }
+}
+/* .move{
+    animation: space 2s linear infinite;
+}
+@keyframes space{
+    0%{
+        letter-spacing: 1px;
+    }
+    25%{
+        letter-spacing: 2px;
+    }
+    50%{
+        letter-spacing: 1.5px;
+    }
+    75%{
+        letter-spacing: 1px;
+    }
+    100%{
+        letter-spacing: 0px;
+    }
+} */

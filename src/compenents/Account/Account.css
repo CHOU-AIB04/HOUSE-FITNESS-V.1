@@ -1,0 +1,8 @@
+.sizee{
+    width: 400px;
+    height: 500px;
+}
+.clicked{
+    background-color: rgb(187, 181, 181) !important;
+    cursor:not-allowed;
+}

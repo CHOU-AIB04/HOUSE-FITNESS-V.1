@@ -1,0 +1,24 @@
+.down::after{
+    position: absolute;
+    content: "";
+    width: 90%;
+    border-bottom: 2px solid rgb(145, 145, 123);
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -10px;
+}
+.down_line::after{
+    position: absolute;
+    content: "";
+    width: 20px;
+    border-bottom: 2px solid wheat;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -1px;
+}
+.heigh{
+    height: 450px;
+    box-shadow: 0 0 10px black,
+    0 0 4px yellow;
+    width: 270px;
+}
