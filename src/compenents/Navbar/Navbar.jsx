@@ -45,13 +45,25 @@ export const Navbar = () => {
 let [click,setclick] = useState(1)
 function handle_click(id) {
    setclick(id)
+   window.scrollTo({
+    top : 400,
+    behavior : "smooth"
+   })
+   setshow(function(prev){
+    return{
+        ...prev,
+        list : prev.list = "bi bi-list",
+        opacity : prev.opacity = "opacity-0"
+
+    }
+   })
 }
 
   return (
     <>
    <header className={`h-16 bg-stone-400 shadow-effect rounded-b-md fixed w-full flex z-50 justify-around items-center transition-all duration-500`}>
         <div className="relative right-15 flex flex-col small_tablet:flex-row gap-1 small_tablet:gap-3 items-center">
-            <img src={mode.logo} alt="logo" className="w-16 small_tablet:w-20"/>
+            <Link to="/"><img src={mode.logo} alt="logo" className="w-16 small_tablet:w-20 transition-all duration-500 hover:scale-105 cursor-pointer"/></Link>
             <h1 className={`text-sm small_tablet:text-xl font-bold  uppercase ${mode.text_color}`}>House <span className="text-stone-200">Fitness</span></h1>
         </div>
         <nav className={`relative -right-3 ${show.opacity} tablet:opacity-100 tablet:right-20 flex-col tablet:flex-row top-40 bg-slate-400 h-64 tablet:h-0 tablet:-top-3 flex justify-around tablet:justify-between pl-6 tablet:pl-0 rounded-md tablet:w-1/2 w-2/3 gap-0 tablet:gap-7`}>
@@ -62,7 +74,7 @@ function handle_click(id) {
                 <li id="li"><Link to="/Contact" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative ${click === 4 ? "linee text-yellow-300" : ""}  tracking-wide`} onClick={() => handle_click(4)}>Contact</Link></li>
             </ul>
             <div className="flex-col justify-between sm:justify-start flex sm:flex-row h-16 items-center relative top-0 tablet:-top-5">
-            <Link to="/account"><button className="h-7 w-32 rounded-md bg-white shadow-effect transition-all duration-700 hover:text-wheat hover:tracking-wide hover:shadow-inset">Log In</button></Link>
+            <Link to="/account"><button className="h-7 w-32 rounded-md bg-white shadow-effect transition-all duration-700 hover:text-wheat hover:tracking-wide hover:shadow-inset" onClick={handle_click}>Log In</button></Link>
             <div className="w-12 h-5 rounded-2xl bg-stone-200 ml-10 relative cursor-pointer" onClick={switch_mode}>
                 <i className={`${mode.icon} text-gray-700 text-2xl absolute -top-2 ${mode.icon_pos} transition-all duration-500`}></i>    
             </div>

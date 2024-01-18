@@ -58,6 +58,7 @@ document.body.style.backgroundColor = mode.background
       <Navbar />
       <Home/>
       <Routes>
+      <Route index element = {<Supplement />}/>
       <Route path="/" element={<Supplement/>} />
       <Route path="/Materials" element={<Materials />} />
       <Route path="/exercices" element={<Exercice />}>
