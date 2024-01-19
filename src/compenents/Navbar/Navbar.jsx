@@ -58,12 +58,18 @@ function handle_click(id) {
     }
    })
 }
+function logo_click(){
+    scrollTo({
+        top : 0,
+        behavior : "smooth"
+    })
+}
 
   return (
     <>
    <header className={`h-16 bg-stone-400 shadow-effect rounded-b-md fixed w-full flex z-50 justify-around items-center transition-all duration-500`}>
         <div className="relative right-15 flex flex-col small_tablet:flex-row gap-1 small_tablet:gap-3 items-center">
-            <Link to="/"><img src={mode.logo} alt="logo" className="w-16 small_tablet:w-20 transition-all duration-500 hover:scale-105 cursor-pointer"/></Link>
+            <Link to="/"><img src={mode.logo} alt="logo" className="w-16 small_tablet:w-20 transition-all duration-500 hover:scale-105 cursor-pointer" onClick={logo_click}/></Link>
             <h1 className={`text-sm small_tablet:text-xl font-bold  uppercase ${mode.text_color}`}>House <span className="text-stone-200">Fitness</span></h1>
         </div>
         <nav className={`relative -right-3 ${show.opacity} tablet:opacity-100 tablet:right-20 flex-col tablet:flex-row top-40 bg-slate-400 h-64 tablet:h-0 tablet:-top-3 flex justify-around tablet:justify-between pl-6 tablet:pl-0 rounded-md tablet:w-1/2 w-2/3 gap-0 tablet:gap-7`}>
