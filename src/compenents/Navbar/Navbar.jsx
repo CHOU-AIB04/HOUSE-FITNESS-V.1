@@ -77,7 +77,7 @@ function logo_click(){
                 <li id="li"><Link to="/" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative ${click === 1 ? "linee text-yellow-300" : ""} tracking-wide`} onClick={() => handle_click(1)}>Supplements</Link></li>
                 <li id="li"><Link to="/Materials" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color}  relative ${click === 2 ? "linee text-yellow-300" : ""}  tracking-wide`} onClick={() => handle_click(2)}>Materials</Link></li>
                 <li id="li"><Link to="/exercices" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative ${click === 3 ? "linee text-yellow-300" : ""} tracking-wide`} onClick={() => handle_click(3)}>Exercices</Link></li>
-                <li id="li"><Link to="/Contact" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative ${click === 4 ? "linee text-yellow-300" : ""}  tracking-wide`} onClick={() => handle_click(4)}>Contact</Link></li>
+                <li id="li"><Link to="/Contact" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative ${click === 4 ? "linee text-yellow-300" : ""}  tracking-wide`} onClick={() => handle_click(4)}>Contact Us</Link></li>
             </ul>
             <div className="flex-col justify-between sm:justify-start flex sm:flex-row h-16 items-center relative top-0 tablet:-top-5">
             <Link to="/account"><button className="h-7 w-32 rounded-md bg-white shadow-effect transition-all duration-700 hover:text-wheat hover:tracking-wide hover:shadow-inset" onClick={handle_click}>Log In</button></Link>
