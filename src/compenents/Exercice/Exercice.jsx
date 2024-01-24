@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Arms } from './Arms/Arms';
 import { Back } from './Back/Back';
@@ -18,11 +18,11 @@ export const Exercice = () => {
   }
   return (
     <>
-     <nav className='relative left-1/2 -translate-x-1/2 w-4/5 small_tablet:w-1/2 flex items-center justify-around down mb-2'>
-        <Link  to="" className={`hover:text-stone-500 transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 1 ? "down_line" : "" } `} onClick={()=>clicked(1)}>Chest</Link>
-        <Link  to="back" className={`hover:text-stone-500  transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 2 ? "down_line" : "" }`} onClick={()=>clicked(2)}>Back</Link>
-        <Link  to="arms" className={`hover:text-stone-500  transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 3 ? "down_line" : "" }`} onClick={()=>clicked(3)}>Arms</Link>
-        <Link  to="legs" className={`hover:text-stone-500  transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 4 ? "down_line" : "" }`} onClick={()=>clicked(4)}>Legs</Link>
+     <nav className='relative left-1/2 -translate-x-1/2 w-4/5 small_tablet:w-1/2 flex items-center justify-around down mb-2 z-40'>
+        <NavLink  to="" className={`hover:text-stone-500 transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 1 ? "down_line" : "" } `} onClick={()=>clicked(1)}>Chest</NavLink>
+        <NavLink  to="back" className={`hover:text-stone-500  transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 2 ? "down_line" : "" }`} onClick={()=>clicked(2)}>Back</NavLink>
+        <NavLink  to="arms" className={`hover:text-stone-500  transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 3 ? "down_line" : "" }`} onClick={()=>clicked(3)}>Arms</NavLink>
+        <NavLink  to="legs" className={`hover:text-stone-500  transition-all duration-500 tracking-wide relative ${mode.text_color} ${item === 4 ? "down_line" : "" }`} onClick={()=>clicked(4)}>Legs</NavLink>
       </nav>
       <Outlet />
     </>
