@@ -27,7 +27,7 @@ export const Materials = () => {
         fake_price : product.fake_price
       }
     })
-    DetailPage("/Machine_Details")
+    DetailPage("Machine_Details")
   }
   let product = Material.map(function(e){
     return(

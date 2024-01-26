@@ -71,18 +71,18 @@ let styles = {
     <> 
    <header className={`h-16 bg-stone-400 shadow-effect rounded-b-md fixed w-full flex z-50 justify-around items-center transition-all duration-500`}>
         <div className="relative right-15 flex flex-col small_tablet:flex-row gap-1 small_tablet:gap-3 items-center">
-            <Link to="/"><img src={mode.logo} alt="logo" className="w-16 small_tablet:w-20 transition-all duration-500 hover:scale-105 cursor-pointer" onClick={logo_click}/></Link>
+            <Link to="/HOUSE-FITNESS-V2/Supplements"><img src={mode.logo} alt="logo" className="w-16 small_tablet:w-20 transition-all duration-500 hover:scale-105 cursor-pointer" onClick={logo_click}/></Link>
             <h1 className={`text-sm small_tablet:text-xl font-bold  uppercase ${mode.text_color}`}>House <span className="text-stone-200">Fitness</span></h1>
         </div>
         <nav className={`relative -right-3 ${show.opacity}  tablet:opacity-100 tablet:right-20 flex-col tablet:flex-row top-40 bg-slate-400 h-64 tablet:h-0 tablet:-top-3 flex justify-around tablet:justify-between pl-6 tablet:pl-0 rounded-md tablet:w-1/2 w-2/3 gap-0 tablet:gap-10`}>
             <ul className="flex  gap-7 tablet:gap-4 flex-col tablet:flex-row">
-                <li><NavLink to="/" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative  tracking-wide text-sm`} onClick={() => handle_click(1)} style={({isActive})=> isActive ? styles : null}>Supplements</NavLink></li>
-                <li><NavLink to="/Materials" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color}  relative   tracking-wide text-sm`} onClick={() => handle_click(2)} style={({isActive})=> isActive ? styles : null}>Materials</NavLink></li>
-                <li><NavLink to="/exercices" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative  tracking-wide text-sm`} onClick={() => handle_click(3)} style={({isActive})=> isActive ? styles : null}>Exercices</NavLink></li>
-                <li><NavLink to="/Contact" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative   tracking-wide text-sm`} onClick={() => handle_click(4)} style={({isActive})=> isActive ? styles : null}>Contact Us</NavLink></li>
+                <li><NavLink to="/HOUSE-FITNESS-V2/Supplements" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative  tracking-wide text-sm`} onClick={() => handle_click(1)} style={({isActive})=> isActive ? styles : null}>Supplements</NavLink></li>
+                <li><NavLink to="/HOUSE-FITNESS-V2/Materials" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color}  relative   tracking-wide text-sm`} onClick={() => handle_click(2)} style={({isActive})=> isActive ? styles : null}>Materials</NavLink></li>
+                <li><NavLink to="/HOUSE-FITNESS-V2/exercices" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative  tracking-wide text-sm`} onClick={() => handle_click(3)} style={({isActive})=> isActive ? styles : null}>Exercices</NavLink></li>
+                <li><NavLink to="/HOUSE-FITNESS-V2/Contact" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative   tracking-wide text-sm`} onClick={() => handle_click(4)} style={({isActive})=> isActive ? styles : null}>Contact Us</NavLink></li>
             </ul>
             <div className="flex-col justify-between sm:justify-start flex sm:flex-row h-16 items-center relative top-0 tablet:-top-5">
-            <Link to="/account"><button className="h-7 w-32 rounded-md bg-white shadow-effect transition-all duration-700 hover:text-wheat hover:tracking-wide hover:shadow-inset" onClick={handle_click}>Log In</button></Link>
+            <Link to="/HOUSE-FITNESS-V2/account"><button className="h-7 w-32 rounded-md bg-white shadow-effect transition-all duration-700 hover:text-wheat hover:tracking-wide hover:shadow-inset" onClick={handle_click}>Log In</button></Link>
             <div className="w-12 h-5 rounded-2xl bg-stone-200 ml-10 relative cursor-pointer" onClick={switch_mode}>
                 <i className={`${mode.icon} text-gray-700 text-2xl absolute -top-2 ${mode.icon_pos} transition-all duration-500`}></i>    
             </div>
