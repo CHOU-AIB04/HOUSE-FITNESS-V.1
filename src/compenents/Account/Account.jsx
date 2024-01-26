@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import './Account.css'
+import { motion} from 'framer-motion'
 
 export const Account = () => {
   let[form,setform] = useState("Log In")
@@ -37,31 +38,31 @@ export const Account = () => {
     setform("Log In")
   }
   return (
-    <section className='sizee tablet:w-2/3 top-4 rounded-md border-white border-2 bg-stone-400 flex justify-around items-center flex-col  relative left-1/2 -translate-x-1/2'>
-      <h1 className='font-bold text-xl text-white uppercase underline'>{form}</h1>
-      <div className='flex flex-col gap-2'>
-      <nav className='flex flex-col gap-8'>
-        {form === "Sign Up" ? 
-        <input type="text" placeholder='Username' className='h-10 w-72 rounded-md tracking-wide pl-2'/> : <></>}
-        <input type="email" placeholder='Email' className='h-10 w-72 rounded-md tracking-wide pl-2'/>
-        <div className='w-72 relative'>
-          <input type={types.type1} placeholder='Password' className='h-10 w-72 rounded-md tracking-wide pl-2'/>
-          <i className={`${types.icon1} absolute top-2 text-md right-2 transition-all duration-300` } onClick = {()=>switch_type(1)}></i>
+      <motion.section initial={{left:"0%"}} transition={{duration:0.2}} whileInView={{left:"50%"}}  className='sizee tablet:w-[35%] top-4 rounded-md bg-stone-300 flex justify-around items-center flex-col  relative -translate-x-1/2'>
+        <h1 className='font-bold text-xl text-white uppercase underline'>{form}</h1>
+        <div className='flex flex-col gap-2'>
+        <nav className='flex flex-col gap-8'>
+          {form === "Sign Up" ? 
+          <input type="text" placeholder='Username' className='h-10 w-72 rounded-md tracking-wide pl-2'/> : <></>}
+          <input type="email" placeholder='Email' className='h-10 w-72 rounded-md tracking-wide pl-2'/>
+          <div className='w-72 relative'>
+            <input type={types.type1} placeholder='Password' className='h-10 w-72 rounded-md tracking-wide pl-2'/>
+            <i className={`${types.icon1} absolute top-2 text-md right-2 transition-all duration-300` } onClick = {()=>switch_type(1)}></i>
+          </div>
+          {form === "Sign Up" ? 
+          <div className='w-72 relative'>
+            <input type={types.type2} placeholder='Comfirm Password' className='h-10 w-72 rounded-md tracking-wide pl-2'/>
+            <i className={`${types.icon2} absolute top-2 text-md right-2 transition-all duration-300`} onClick = {()=>switch_type(2)} ></i>
+          </div> : <></>
+          }
+          
+        </nav>
+        {form === "Log In" ? <a href="#" className='text-white text-sm'>Forgot password ?</a> : <></>}
         </div>
-        {form === "Sign Up" ? 
-        <div className='w-72 relative'>
-          <input type={types.type2} placeholder='Comfirm Password' className='h-10 w-72 rounded-md tracking-wide pl-2'/>
-          <i className={`${types.icon2} absolute top-2 text-md right-2 transition-all duration-300`} onClick = {()=>switch_type(2)} ></i>
-        </div> : <></>
-        }
-        
-      </nav>
-      {form === "Log In" ? <a href="#" className='text-white text-sm'>Forgot password ?</a> : <></>}
-      </div>
-      <div className='flex w-80 justify-between items-center'>
-        <button type='submit' className={`w-28 bg-slate-500 h-8 rounded-md text-white font-bold ${form === "Sign Up" ? "clicked" : ""}`} onClick={switch_to_sign}>Sign UP</button>
-        <button type='submit' className={`w-28 bg-slate-500 h-8 rounded-md text-white font-bold ${form === "Log In" ? "clicked" : ""}`} onClick={switch_to_log}>Log In</button>
-      </div>
-    </section>
+        <div className='flex w-80 justify-between items-center'>
+          <button type='submit' className={`w-28 bg-slate-500 h-8 rounded-md text-white font-bold ${form === "Sign Up" ? "clicked" : ""}`} onClick={switch_to_sign}>Sign UP</button>
+          <button type='submit' className={`w-28 bg-slate-500 h-8 rounded-md text-white font-bold ${form === "Log In" ? "clicked" : ""}`} onClick={switch_to_log}>Log In</button>
+        </div>
+      </motion.section>
   )
 }

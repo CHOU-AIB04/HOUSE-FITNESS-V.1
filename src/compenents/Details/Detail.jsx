@@ -2,14 +2,6 @@ import React from 'react'
 import { useContext } from 'react'
 import { useState } from 'react'
 import { Details } from '../Details'
-import morroco from '../../img/countries/morroco.png'
-import usa from '../../img/countries/Usa.png'
-import Uk from '../../img/countries/can.png'
-import china from "../../img/countries/china.png"
-import ger from '../../img/countries/ger.png'
-import can from '../../img/countries/can.png'
-import visa from '../../img/banque/mas.png'
-import mas from "../../img/banque/visa.png"
 import './Detail.css'
 import { AppContext } from '../AppContext'
 

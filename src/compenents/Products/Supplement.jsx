@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion ,MotionConfig} from "framer-motion"
 import './Product.css'
 import { useContext } from 'react'
 import { AppContext } from '../AppContext'
@@ -29,7 +30,8 @@ export const Supplement = () => {
   }
   let product = supplement_info.map(function(e){
     return(
-      <nav id={e.id} key= {e.id} className ={`relative height w-64 ${mode.product_color} flex flex-col gap-2 items-center rounded-md sh transition-all duration-500 cursor-pointer scal`}>
+      <MotionConfig transition={{duration : 1.5}}>
+        <motion.nav initial={{ opacity: 0}}  whileInView={{ opacity: 1}} viewport={{ once: true }} id={e.id} key= {e.id} className ={`relative height w-64 ${mode.product_color} flex flex-col gap-2 items-center rounded-md sh transition-all duration-500 cursor-pointer scal`}>
         <div className={`h-1/2 w-2/3 rounded-md overflow-hidden cursor-pointer`}>
           <img src={e.src} className={`w-full h-full object-cover`} alt="pic"/>
         </div>
@@ -51,15 +53,17 @@ export const Supplement = () => {
           </div>
         </div>
         <button className="w-36 absolute bottom-1 rounded-md hover:scale-105 cursor-pointer h-8 bg-neutral-800 text-white transition-all duration-500 hover:text-yellow-200" onClick={()=>HandleDetails(e.id)}><i className="bi bi-bag"></i>Shop Now</button>
-      </nav>
+      </motion.nav>
+      </MotionConfig>
+      
     )
   })
   return (
     <section className={`${mode.background} w-full  flex flex-col items-center`}>
       <h1 className={`font-bold text-3xl relative el ${mode.text_color}`}>Supplements</h1>
-      <article className={`bg-transparent line w-full relative top-12 grid grid-cols-1 small_tablet:grid-cols-3 tablet:grid-cols-4 sm:grid-cols-2  justify-items-center gap-5 transition-all durantion-500`}>
+      <motion.article key={1} initial={{gap:"100px"}} whileInView={{gap:"20px"}}  viewport={{once:true}} className={`bg-transparent line w-full relative top-12 grid grid-cols-1 small_tablet:grid-cols-3 tablet:grid-cols-4 sm:grid-cols-2  justify-items-center transition-all durantion-500`}>
         {product}
-      </article>
+      </motion.article>
     </section>
   )
 }
