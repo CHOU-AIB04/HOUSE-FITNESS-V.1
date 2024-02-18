@@ -57,7 +57,7 @@ function App() {
           <Home />
           <Routes>
             <Route index element={<Supplement />} />
-            <Route path="/HOUSE-FITNESS-V2/Supplements" element={<Supplement />} />
+            {/* <Route inde element={<Supplement />} /> */}
             <Route path="/HOUSE-FITNESS-V2/Materials" element={<Materials />} />
             <Route path="/HOUSE-FITNESS-V2/exercices" element={<Exercice />}/>
             <Route path="/HOUSE-FITNESS-V2/Contact" element={<Contact />} />
