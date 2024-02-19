@@ -58,12 +58,12 @@ function App() {
           <Routes>
             <Route index element={<Supplement />} />
             {/* <Route inde element={<Supplement />} /> */}
-            <Route path="/HOUSE-FITNESS-V2/Materials" element={<Materials />} />
-            <Route path="/HOUSE-FITNESS-V2/exercices" element={<Exercice />}/>
-            <Route path="/HOUSE-FITNESS-V2/Contact" element={<Contact />} />
-            <Route path="/HOUSE-FITNESS-V2/account" element={<Account />} />
-            <Route path="HOUSE-FITNESS-V2/Supplements/Supplement_Details" element={<Detail />} />
-            <Route path="/HOUSE-FITNESS-V2/Materials/Machine_Details" element={<Detail />} />
+            <Route path="/HOUSE-FITNESS-V.1/Materials" element={<Materials />} />
+            <Route path="/HOUSE-FITNESS-V.1/exercices" element={<Exercice />}/>
+            <Route path="/HOUSE-FITNESS-V.1/Contact" element={<Contact />} />
+            <Route path="/HOUSE-FITNESS-V.1/account" element={<Account />} />
+            <Route path="HOUSE-FITNESS-V.1/Supplements/Supplement_Details" element={<Detail />} />
+            <Route path="/HOUSE-FITNESS-V.1/Materials/Machine_Details" element={<Detail />} />
           </Routes>
           <Footer />
         </Router>
