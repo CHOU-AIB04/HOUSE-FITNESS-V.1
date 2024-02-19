@@ -69,8 +69,8 @@ let styles = {
 }
   return (
     <> 
-   <header className={`h-16 bg-stone-400 shadow-effect rounded-b-md fixed w-full flex z-50 justify-around items-center transition-all duration-500`}>
-        <div className="relative right-15 flex flex-col small_tablet:flex-row gap-1 small_tablet:gap-3 items-center">
+   <header className={`h-16 bg-stone-400 shadow-effect rounded-b-md fixed w-full  z-50 transition-all duration-500`}>
+        <div className="absolute left-9 top-2 tablet:top-4 flex flex-col small_tablet:flex-row gap-1 small_tablet:gap-3 items-center">
             <Link to="/HOUSE-FITNESS-V2/Supplements"><img src={mode.logo} alt="logo" className="w-16 small_tablet:w-20 transition-all duration-500 hover:scale-105 cursor-pointer" onClick={logo_click}/></Link>
             <h1 className={`text-sm small_tablet:text-xl font-bold  uppercase ${mode.text_color}`}>House <span className="text-stone-200">Fitness</span></h1>
         </div>
@@ -81,7 +81,7 @@ let styles = {
                 <li><NavLink to="/HOUSE-FITNESS-V.1/exercices" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative  tracking-wide text-sm`} onClick={() => handle_click(3)} style={({isActive})=> isActive ? styles : null}>Exercices</NavLink></li>
                 <li><NavLink to="/HOUSE-FITNESS-V.1/Contact" className={`hover:text-yellow-200 transition-all duration-500 ${mode.text_color} relative   tracking-wide text-sm`} onClick={() => handle_click(4)} style={({isActive})=> isActive ? styles : null}>Contact Us</NavLink></li>
             </ul>
-            <div className="flex-col justify-between sm:justify-start flex sm:flex-row h-16 items-center relative top-0 tablet:-top-5">
+            <div className="justify-start flex h-16 items-center relative top-0 tablet:-top-5">
             <Link to="/HOUSE-FITNESS-V2/account"><button className="h-7 w-32 rounded-md bg-white shadow-effect transition-all duration-700 hover:text-wheat hover:tracking-wide hover:shadow-inset" onClick={handle_click}>Log In</button></Link>
             <div className="w-12 h-5 rounded-2xl bg-stone-200 ml-10 relative cursor-pointer" onClick={switch_mode}>
                 <i className={`${mode.icon} text-gray-700 text-2xl absolute -top-2 ${mode.icon_pos} transition-all duration-500`}></i>    
