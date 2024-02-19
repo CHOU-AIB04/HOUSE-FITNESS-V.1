@@ -26,7 +26,11 @@ export const Supplement = () => {
         fake_price : product.fake_price
       }
     })
-    DetailPage("Supplement_Details")
+    DetailPage("/HOUSE-FITNESS-V.1/Supplements/Supplement_Details")
+    scrollTo({
+      top: 400,
+      behavior:"smooth"
+    })
   }
   let product = supplement_info.map(function(e){
     return(

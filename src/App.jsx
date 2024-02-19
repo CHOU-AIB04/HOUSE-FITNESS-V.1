@@ -62,7 +62,7 @@ function App() {
             <Route path="/HOUSE-FITNESS-V.1/exercices" element={<Exercice />}/>
             <Route path="/HOUSE-FITNESS-V.1/Contact" element={<Contact />} />
             <Route path="/HOUSE-FITNESS-V.1/account" element={<Account />} />
-            <Route path="HOUSE-FITNESS-V.1/Supplements/Supplement_Details" element={<Detail />} />
+            <Route path="/HOUSE-FITNESS-V.1/Supplements/Supplement_Details" element={<Detail />} />
             <Route path="/HOUSE-FITNESS-V.1/Materials/Machine_Details" element={<Detail />} />
           </Routes>
           <Footer />

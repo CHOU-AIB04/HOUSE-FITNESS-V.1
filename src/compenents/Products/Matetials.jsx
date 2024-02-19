@@ -28,6 +28,10 @@ export const Materials = () => {
       }
     })
     DetailPage("Machine_Details")
+    scrollTo({
+      top: 400,
+      behavior:"smooth"
+    })
   }
   let product = Material.map(function(e){
     return(
